@@ -85,15 +85,14 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\xam.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZoomViewApp\ZoomViewApp.csproj">
       <Project>{2E784440-D365-4906-BFE9-744207CCEF5B}</Project>
       <Name>ZoomViewApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\qzct.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

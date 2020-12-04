@@ -133,4 +133,7 @@
       <Name>ZoomViewApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xam.png" />
+  </ItemGroup>
 </Project>

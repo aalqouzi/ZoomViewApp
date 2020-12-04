@@ -3,16 +3,37 @@
     x:Class="ZoomViewApp.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ZoomGesture">
+    xmlns:local="clr-namespace:ZoomGesture"
+    xmlns:local2="clr-namespace:SwipeGesture">
 
-    <Grid Padding="20" RowDefinitions="*,40,40">
-        <local:ZoomContainer Grid.Row="0">
+    <ContentPage.Content>
+
+
+        <local:ZoomContainer>
             <local:ZoomContainer.Content>
                 <Image
                     x:Name="Image1"
                     BackgroundColor="Azure"
+                    HeightRequest="1024"
                     HorizontalOptions="Center"
-                    Source="qzct.jpg"
+                    Source="xam.png"
+                    VerticalOptions="Center"
+                    WidthRequest="768" />
+            </local:ZoomContainer.Content>
+        </local:ZoomContainer>
+    </ContentPage.Content>
+
+    <!--<Grid
+        Padding="20"
+        BackgroundColor="Azure"
+        RowDefinitions="*,40,40,40,40,40">
+        <local:ZoomContainer Grid.Row="0">
+            <local:ZoomContainer.Content>
+                <Image
+                    x:Name="Image1"
+                    BackgroundColor="Red"
+                    HorizontalOptions="Center"
+                    Source="xam.png"
                     VerticalOptions="Center" />
             </local:ZoomContainer.Content>
         </local:ZoomContainer>
@@ -38,6 +59,40 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
-    </Grid>
+
+        <Label Grid.Row="3" VerticalOptions="EndAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="X=" />
+                        <Span Text="{Binding Source={Reference Image1}, Path=X}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Grid.Row="4" VerticalOptions="EndAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Y=" />
+                        <Span Text="{Binding Source={Reference Image1}, Path=Y}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Grid.Row="5" VerticalOptions="EndAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Scale=" />
+                        <Span Text="{Binding Source={Reference Image1}, Path=Scale}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+    </Grid>-->
 
 </ContentPage>

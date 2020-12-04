@@ -16,5 +16,10 @@ namespace ZoomViewApp
         {
             InitializeComponent();
         }
+
+        private void ZoomContainer_Swipe(object sender, SwipedEventArgs e)
+        {
+            DisplayAlert("", $"You swiped: {e.Direction.ToString()}", "OK");
+        }
     }
 }
