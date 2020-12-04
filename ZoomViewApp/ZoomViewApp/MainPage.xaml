@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ZoomViewApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ZoomGesture">
+
+    <Grid Padding="20" RowDefinitions="*,40,40">
+        <local:ZoomContainer Grid.Row="0">
+            <local:ZoomContainer.Content>
+                <Image
+                    x:Name="Image1"
+                    BackgroundColor="Azure"
+                    HorizontalOptions="Center"
+                    Source="qzct.jpg"
+                    VerticalOptions="Center" />
+            </local:ZoomContainer.Content>
+        </local:ZoomContainer>
+
+        <Label Grid.Row="1" VerticalOptions="EndAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="TranslationX=" />
+                        <Span Text="{Binding Source={Reference Image1}, Path=TranslationX}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Grid.Row="2" VerticalOptions="EndAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="TranslationY=" />
+                        <Span Text="{Binding Source={Reference Image1}, Path=TranslationY}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </Grid>
+
+</ContentPage>
